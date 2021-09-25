@@ -4,9 +4,20 @@
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
+/* --Variables--- */
+:root{
+    --main-color:#df42b1;
+    --blue: #505add;
+    --blue-dark: #18293c;
+    --white:#ffffff;
+    --white-alpha-40:rgb(255,255,255,0.4);
+    --white-alpha-50:rgba(255,255,255,0.5);
+    --white-alpha-25:rgb(255,255,255,0.25);
+    --black:#000000;
+}
 /* ---navigation --- */
 .navigation{
-    background-color:rgb(0,0,0);
+    background-color:var(--black);
     padding:10px;
     border-bottom-left-radius: 15px;
     letter-spacing: 0.5px;
@@ -22,15 +33,15 @@
     padding:0px 10px;
 }
 .list-item .active{
-    color: rgb(223, 66, 177);
+    color: var(--main-color);
     font-weight: bold;
 }
 .link-item{
     text-decoration: none;
-    color: rgba(255,255,255,.5);
+    color:var(--white-alpha-50);
 }
 .link-item:hover{
-    color: rgb(255,255,255);
+    color: var(--white);
 }
 /* ---header--- */
 .hero{
@@ -42,7 +53,7 @@
     width: 40%;
 }
 .hero-heading .heading-inverted{
-    color: rgb(223,66,177);
+    color: var(--main-color);
 }
 /* --sections--- */
 .container-center{
@@ -62,16 +73,17 @@
     background-color: #eee7eb;
   }
 .btn-custom{
-    color: #ffffff;
-    background: #df42b1;
-    background-image: -webkit-linear-gradient(120deg, #505add 0%, #df42b1 100%);
+    color: var(--white);
+    background: var(--main-color);
+    background-image: -webkit-linear-gradient(120deg, var(--blue) 0%, var(--main-color) 100%);
     border-radius: 23px;
     transition-duration: 500ms;
     text-decoration: none;
     padding: 10px;
+    border: none;
 }
 .btn-custom:hover{
-    color: black;
+    color: var(--black);
 }
 .about-text{
     text-align: center;
@@ -79,16 +91,55 @@
     
 }
 .about-text h1{
-    color:#df42b1;
+    color:var(--main-color);
     margin-top: 10px;
 }
 .date{
-    color:#df42b1;
+    color:var(--main-color);
 }
 
 .timeline-item{
     margin-top: 1%;
     padding: 10px;
+}
+/* ---Projects--- */
+.container{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.row h1{
+    margin: 10px 0;
+}
+.section-title{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.project-item{
+    width: calc((100% / 3) - 30px);
+    margin: 0 15px 30px;
+}
+.project-item-thumbnail{
+    /* border: 2px solid rgb(182, 175, 175); */
+    border-radius: 5px;
+}
+.project-item-thumbnail img{
+    width: 100%;
+
+}
+.project-item-title{
+    margin: 10px 0;
+    display: block;
+}
+.project-item-detail{
+    margin-top: 14px;
 }
 @media screen and (max-width: 600px) {
     .nav-list {
