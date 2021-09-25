@@ -73,6 +73,23 @@
 .btn-custom:hover{
     color: black;
 }
+.about-text{
+    text-align: center;
+    padding: 1%;
+    
+}
+.about-text h1{
+    color:#df42b1;
+    margin-top: 10px;
+}
+.date{
+    color:#df42b1;
+}
+
+.timeline-item{
+    margin-top: 1%;
+    padding: 10px;
+}
 @media screen and (max-width: 600px) {
     .nav-list {
       display: none;
